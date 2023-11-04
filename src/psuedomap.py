@@ -1,5 +1,8 @@
 import folium
 import requests  # To download the HTML file
+import shutil
+import csv
+
 
 class InteractiveMap:
     def __init__(self, lat, lon, zoom_start):
@@ -10,6 +13,8 @@ class InteractiveMap:
 
     def save_map(self, filename):
         self.map.save(filename)
+
+
 
 
 my_map = InteractiveMap(51.5074, -0.1278, 10)  # London coordinates
@@ -23,7 +28,7 @@ file_name = "interactive_map.html"  # Define the file name
 my_map.save_map(file_name)
 
 # Define the path to the directory where the file will be moved
-save_directory = "/Users/jessica/Desktop/NewHacks2023"
+save_directory = ""  #input custom directory path
 target_file_path = f"{save_directory}/{file_name}"
 
 # Move the file to the specified directory
