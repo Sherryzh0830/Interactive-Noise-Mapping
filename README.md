@@ -31,7 +31,7 @@ Input your own custom directory in `psuedomap.py`
 save_directory = ""  #input custom directory path
 ```
 ```
-file_path = '' #input your own custom file path directory
+file_path = "" #input your own custom file path directory
 ```
 ## Authors
 
