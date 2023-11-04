@@ -10,7 +10,8 @@ Our project is dedicated to delivering a comprehensive and user-friendly noise m
 
 Each data point is geographically anchored with precise longitude and latitude coordinates, alongside the designation of the location's name for ease of identification. Furthermore, the platform categorizes the noise by its sources — such as traffic, construction, or public activities — and annotates the data with the month in which it was captured to track temporal noise variations. 
 
-To offer a detailed understanding, we provide the maximum, minimum, and average noise levels for a nuanced analysis. Upon this analysis, our platform goes a step further: it generates tailored recommendations based on the noise level humans can tolerate naturally without creating damages to the ear. (Source: https://www.healthlinkbc.ca/health-topics/harmful-noise-levels#:~:text=But%20any%20sound%20that%20is,such%20as%20earplugs%20or%20earmuffs)
+To offer a detailed understanding, we provide the maximum, minimum, and average noise levels for a nuanced analysis. Upon this analysis, our platform goes a step further: it generates tailored recommendations based on the noise level humans can tolerate naturally without creating damages to the ear. 
+*Source: https://www.healthlinkbc.ca/health-topics/harmful-noise-levels#:~:text=But%20any%20sound%20that%20is,such%20as%20earplugs%20or%20earmuffs*
 
 ![My Image](HHF-Noise-Level-Chart-01.png) 
 *Source: https://hearinghealthfoundation.org/decibel-levels*
