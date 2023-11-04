@@ -11,7 +11,6 @@ Our project is dedicated to delivering a comprehensive and user-friendly noise m
 Each data point is geographically anchored with precise longitude and latitude coordinates, alongside the designation of the location's name for ease of identification. Furthermore, the platform categorizes the noise by its sources — such as traffic, construction, or public activities — and annotates the data with the month in which it was captured to track temporal noise variations. 
 
 To offer a detailed understanding, we provide the maximum, minimum, and average noise levels for a nuanced analysis. Upon this analysis, our platform goes a step further: it generates tailored recommendations based on the noise level humans can tolerate naturally without creating damages to the ear. 
-*Source: https://www.healthlinkbc.ca/health-topics/harmful-noise-levels#:~:text=But%20any%20sound%20that%20is,such%20as%20earplugs%20or%20earmuffs*
 
 ![My Image](HHF-Noise-Level-Chart-01.png) 
 *Source: https://hearinghealthfoundation.org/decibel-levels*
@@ -41,3 +40,14 @@ file_path = "" #input your own custom file path directory
 - [@chenz623](https://github.com/chenz623)
 - [@rachelmyl](https://github.com/rachelmyl)
 - [@Sherryzh0830](https://github.com/Sherryzh0830)
+
+## Sources of Information
+Health BC noise risks
+https://www.healthlinkbc.ca/health-topics/harmful-noise-levels#:~:text=But%20any%20sound%20that%20is,such%20as%20earplugs%20or%20earmuffs. 
+
+WHO sleep noise level recommendation 
+https://www.who.int/europe/news-room/fact-sheets/item/noise#:~:text=The%20WHO%20guidelines%20for%20night,health%20effects%20from%20night%20noise. 
+
+MuteGroup sleep noise level and health risks breakdown
+https://www.mutesoundproofing.com/news-soundproofing/night-noise-guidelines-noise-exposure-sleep-health/ 
+ 
