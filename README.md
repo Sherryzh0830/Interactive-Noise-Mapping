@@ -12,7 +12,9 @@ Our project is dedicated to delivering a comprehensive and user-friendly noise m
 
 Each data point is geographically anchored with precise longitude and latitude coordinates, alongside the designation of the location's name for ease of identification. Furthermore, the platform categorizes the noise by its sources — such as traffic, construction, or public activities — and annotates the data with the month in which it was captured to track temporal noise variations. 
 
-To offer a detailed understanding, we provide the maximum, minimum, and average noise levels for a nuanced analysis. Upon this analysis, our platform goes a step further: it generates tailored recommendations. 
+To offer a detailed understanding, we provide the maximum, minimum, and average noise levels for a nuanced analysis. Upon this analysis, our platform goes a step further: it generates tailored recommendations based on the noise level humans can tolerate naturally without creating damages to the ear.
+
+![My Image](HHF-Noise-Level-Chart-01.png)
 
 These suggestions aim to support **urban development, guide policy-making for noise regulation, and assist residents with informed decision-making**. Our ultimate goal is to transform data into actionable insights for a quieter, more peaceful urban experience.
 
