@@ -1,0 +1,10 @@
+Noise source,,,,,,
+Case number,Location name,Noise type,Latitude,Longitude,Lavg_day (dB),Lavg_night (dB)
+1,Yonge-Dundas Square,"Large gathering acticities, traffic, construction ",43.65629145,280.6190693,102.660942,82.260942
+2,203 College St,"Construction, traffic",43.65856187,280.6043708,55.160942,29.460942
+3,Spadina and College Intersection,"Traffic, large gathering activities",43.65784388,280.5999184,76.760942,55.960942
+4,Sydney Smith,Large gathering acticity,43.66253974,280.6011844,82.460942,26.460942
+5,Queens park south,Large gathering activity,43.66105728,280.6089735,104.760942,27.960942
+6,Welleslley and Church intersection,Large gathering activity,43.66557438,280.618844,66.460942,78.360942
+7,Yonge and College intersection,"Construction, traffic",43.66129013,280.6169128,59.360942,42.660942
+8,Chestnut Residence,Construction,43.65519697,280.6138337,85.260942,39.860942
