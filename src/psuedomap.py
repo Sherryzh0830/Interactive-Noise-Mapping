@@ -17,10 +17,12 @@ class InteractiveMap:
           'beige',    #50-70    noisy_gate = 4
           'green'     #0-50     noisy_gate = 5
           ]
-        folium.Marker([marker_lat, marker_lon], popup=popup_text, icon=folium.Icon(color=colors[noisy_gate])).add_to(self.map)
+
+        folium.Marker([marker_lat, marker_lon], popup=folium.Popup(popup_text, max_width=300,min_width=300), icon=folium.Icon(color=colors[noisy_gate])).add_to(self.map)
 
     def save_map(self, filename):
         self.map.save(filename)
+
 
 class MyObject:
     def __init__(self, name, noise_type, lat, lon, NL_min, NL_max, NL_avg):
@@ -41,20 +43,35 @@ def create_objects_from_csv(file_path):
 
         # Skip the header row if it exists
         next(csv_reader)
+        next(csv_reader)
 
         for row in csv_reader:
             # Assuming the CSV columns are in the order: attribute1, attribute2, attribute3
-            name = row[0]
-            noise_type = row[1]
-            lat = row[2]
-            lon = row[3]
-            NL_min = row[4]
-            NL_max = row[5]
-            NL_avg = row[6]
+            name = row[1]
+            noise_type = row[2]
+            lat = float(row[3])
+            lon = float(row[4])
+            day_noise = float(row[5])
+            night_noise = float(row[6])
+
+            if (day_noise > 120):
+              noisy_gate = 0
+            elif (day_noise > 100):
+              noisy_gate = 1
+            elif (day_noise > 85):
+              noisy_gate = 2
+            elif (day_noise > 70):
+              noisy_gate = 3
+            elif (day_noise > 50):
+              noisy_gate = 4
+            else:
+              noisy_gate = 5
+
 
             # Create an object using the row values
-            obj = MyObject(name, noise_type, lat, lon, NL_min, NL_max, NL_avg)
+            obj = MyObject(name, noise_type, lat, lon, day_noise, night_noise, noisy_gate)
             objects.append(obj)
+
     return objects
 
 
@@ -116,47 +133,49 @@ dict_nighttime[4] = ("Nighttime Reference Noise:\n" +
                    "Highly disturbed and can significantly disrupt sleep. Continuous exposure to high noise levels during the night can lead to sleep disturbances, insomnia, and potential health issues.\n")
 
 
+
+
 def user_recommendation_message(MyObject):
   noise_type = MyObject.noise_type
-  day_noise_level = MyObject.day_noise_level
-  night_noise_level = MyObject.night_night_level
+  day_noise_level = MyObject.day_noise
+  night_noise_level = MyObject.night_noise
   message = ""
   day_message = ""
   night_message = ""
   #daytime message
   if(day_noise_level <= 50):
-    day_message = day_noise_level + "\n"
+    day_message = str(round(day_noise_level, 2)) + "\n"
     day_message += dict_daytime[1]
   elif (day_noise_level <= 70):
-    day_message = day_noise_level + "\n"
+    day_message = str(round(day_noise_level, 2)) + "\n"
     day_message += dict_daytime[2]
   elif (day_noise_level <= 85):
-    day_message = day_noise_level + "\n"
+    day_message = str(round(day_noise_level, 2)) + "\n"
     day_message += dict_daytime[3]
   elif (day_noise_level <= 100):
-    day_message = day_noise_level + "\n"
+    day_message = str(round(day_noise_level, 2)) + "\n"
     day_message += dict_daytime[4]
   elif (day_noise_level <= 120):
-    day_message = day_noise_level + "\n"
+    day_message = str(round(day_noise_level, 2)) + "\n"
     day_message += dict_daytime[5]
   else:
-    day_message = day_noise_level + "\n"
+    day_message = str(round(day_noise_level, 2)) + "\n"
     day_message += dict_daytime[6]
   #nighttime message
   if(night_noise_level <= 30):
-    night_message = night_noise_level + "\n"
+    night_message = str(round(night_noise_level, 2)) + "\n"
     night_message += dict_daytime[1]
   elif (night_noise_level <= 40):
-    night_message = night_noise_level + "\n"
+    night_message = str(round(night_noise_level, 2)) + "\n"
     night_message += dict_daytime[2]
   elif (night_noise_level <= 55):
-    night_message = night_noise_level + "\n"
+    night_message = str(round(night_noise_level, 2)) + "\n"
     night_message += dict_daytime[3]
   else:
-    night_message = night_noise_level + "\n"
+    night_message = str(round(night_noise_level, 2)) + "\n"
     night_message += dict_daytime[4]
 
-  message = "Noise type: " + noise_type + "\nDuring the DAY (7AM - 11PM): " + day_message + "\nDuring the NIGHT (11PM - 7AM): " + night_message
+  message = "Noise type: " + noise_type + " (day - " + str(day_noise_level) + "dB, night - " + str(night_noise_level) + "dB)"+"<br><br>During the DAY (7AM - 11PM): " + day_message + "<br><br>During the NIGHT (11PM - 7AM): " + night_message
   return message
 
 
@@ -164,12 +183,11 @@ def user_recommendation_message(MyObject):
     # def student_recommendation(self, sound_level):
     # def holidays_recommendation(self, sound_level):
 
-
-my_map = InteractiveMap(51.5074, -0.1278, 10)  # London coordinates
-
-# Adding markers to the map
-my_map.add_marker(51.5033, -0.1195, "Buckingham Palace")
-my_map.add_marker(51.5007, -0.1246, "Big Ben")
+file_path = "" #input your own custom file path directory
+objects = create_objects_from_csv(file_path)
+my_map = InteractiveMap(43.65974555361324, 280.6028258800507, 15)  # Bahen coordinates -- initialize
+for obj in objects:
+  my_map.add_marker(obj.lat, obj.lon, obj.noisy_gate, user_recommendation_message(obj))
 
 # Save the map to an HTML file
 file_name = "interactive_map.html"  # Define the file name
