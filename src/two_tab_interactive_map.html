@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_221ecd720db964439c948168bbe3c9bc {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_221ecd720db964439c948168bbe3c9bc" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_221ecd720db964439c948168bbe3c9bc = L.map(
+                "map_221ecd720db964439c948168bbe3c9bc",
+                {
+                    center: [43.65974555361324, 280.6028258800507],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 15,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_3322daf2ff93ac637e989210f09d8070 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_221ecd720db964439c948168bbe3c9bc);
+        
+    
+            var feature_group_1cbbec3ae1035257882f979efe1dc796 = L.featureGroup(
+                {}
+            ).addTo(map_221ecd720db964439c948168bbe3c9bc);
+        
+    
+            var tile_layer_6b906e8108d0c687a7aa4e02c54f1ab1 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(feature_group_1cbbec3ae1035257882f979efe1dc796);
+        
+    
+            var marker_286443eeb9e733108a8db05a3bc59855 = L.marker(
+                [43.65629145, 280.6190693],
+                {}
+            ).addTo(feature_group_1cbbec3ae1035257882f979efe1dc796);
+        
+    
+            var icon_13fcd1d559311dfc93a5ac4511748839 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_286443eeb9e733108a8db05a3bc59855.setIcon(icon_13fcd1d559311dfc93a5ac4511748839);
+        
+    
+        var popup_fc61dd560962bdc4d942b4f95148ae53 = L.popup({"maxWidth": 300, "minWidth": 300});
+
+        
+            
+                var html_25ab4dc5f2e5361b3c0c0edace640a81 = $(`<div id="html_25ab4dc5f2e5361b3c0c0edace640a81" style="width: 100.0%; height: 100.0%;">Noise type: Large gathering acticities, traffic, construction <br><br>During the DAY (7AM - 11PM): 102.66dB<br><br>Daytime Reference Noise:<br>Nightclubs and bars, ice cream trucks, dogs barking in ears, Rock or Pop concerts, siren<br><br>Daytime Tips:<br>It's a high-energy atmosphere where you might experience sounds like music, cheering, or applause. Take necessary precautions to protect your hearing in these situations.</div>`)[0];
+                popup_fc61dd560962bdc4d942b4f95148ae53.setContent(html_25ab4dc5f2e5361b3c0c0edace640a81);
+            
+        
+
+        marker_286443eeb9e733108a8db05a3bc59855.bindPopup(popup_fc61dd560962bdc4d942b4f95148ae53)
+        ;
+
+        
+    
+    
+            var marker_a04db0616b8c0b52c7d7c22eea7b5920 = L.marker(
+                [43.65856187, 280.6043708],
+                {}
+            ).addTo(feature_group_1cbbec3ae1035257882f979efe1dc796);
+        
+    
+            var icon_7a08d08ab0fbae2aa9b5d30057108a8f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "beige", "prefix": "glyphicon"}
+            );
+            marker_a04db0616b8c0b52c7d7c22eea7b5920.setIcon(icon_7a08d08ab0fbae2aa9b5d30057108a8f);
+        
+    
+        var popup_7c37e91a2c4712792a85aaca3a5e2087 = L.popup({"maxWidth": 300, "minWidth": 300});
+
+        
+            
+                var html_1a3d260e94653a9e7826b5d54d6f1059 = $(`<div id="html_1a3d260e94653a9e7826b5d54d6f1059" style="width: 100.0%; height: 100.0%;">Noise type: Construction, traffic<br><br>During the DAY (7AM - 11PM): 55.16dB<br><br>Daytime Reference Noise:<br>Rainfall, average room noise, background music<br><br>Daytime Tips:<br>The noise level is comparable to a calm and average room. It's a comfortable and soothing atmosphere.</div>`)[0];
+                popup_7c37e91a2c4712792a85aaca3a5e2087.setContent(html_1a3d260e94653a9e7826b5d54d6f1059);
+            
+        
+
+        marker_a04db0616b8c0b52c7d7c22eea7b5920.bindPopup(popup_7c37e91a2c4712792a85aaca3a5e2087)
+        ;
+
+        
+    
+    
+            var marker_43cbcb9e99eb43cc8b7f775625806391 = L.marker(
+                [43.65784388, 280.5999184],
+                {}
+            ).addTo(feature_group_1cbbec3ae1035257882f979efe1dc796);
+        
+    
+            var icon_3a2c1e9a4eb3a2772d422d9d6c054c40 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_43cbcb9e99eb43cc8b7f775625806391.setIcon(icon_3a2c1e9a4eb3a2772d422d9d6c054c40);
+        
+    
+        var popup_28b40944fc5b46e1397d6dbb49f9fb42 = L.popup({"maxWidth": 300, "minWidth": 300});
+
+        
+            
+                var html_b753537a6f2e631a9cf0aafe0b2f1227 = $(`<div id="html_b753537a6f2e631a9cf0aafe0b2f1227" style="width: 100.0%; height: 100.0%;">Noise type: Traffic, large gathering activities<br><br>During the DAY (7AM - 11PM): 76.76dB<br><br>Daytime Reference Noise:<br>Normal conversation, landscaping equipment (from inside a house), inside an airplane<br><br>Daytime Tips:<br>It might be a bit noisy, but still manageable for most people.</div>`)[0];
+                popup_28b40944fc5b46e1397d6dbb49f9fb42.setContent(html_b753537a6f2e631a9cf0aafe0b2f1227);
+            
+        
+
+        marker_43cbcb9e99eb43cc8b7f775625806391.bindPopup(popup_28b40944fc5b46e1397d6dbb49f9fb42)
+        ;
+
+        
+    
+    
+            var marker_517fbabd46a6da76519d2736541e8939 = L.marker(
+                [43.66253974, 280.6011844],
+                {}
+            ).addTo(feature_group_1cbbec3ae1035257882f979efe1dc796);
+        
+    
+            var icon_15462eec06a17de2838bf1b4971ec34f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_517fbabd46a6da76519d2736541e8939.setIcon(icon_15462eec06a17de2838bf1b4971ec34f);
+        
+    
+        var popup_58c2f7c26136973d8dda29de9bde4066 = L.popup({"maxWidth": 300, "minWidth": 300});
+
+        
+            
+                var html_c1031fff6888c2e7e8adc0a9f143a305 = $(`<div id="html_c1031fff6888c2e7e8adc0a9f143a305" style="width: 100.0%; height: 100.0%;">Noise type: Large gathering acticity<br><br>During the DAY (7AM - 11PM): 82.46dB<br><br>Daytime Reference Noise:<br>Normal conversation, landscaping equipment (from inside a house), inside an airplane<br><br>Daytime Tips:<br>It might be a bit noisy, but still manageable for most people.</div>`)[0];
+                popup_58c2f7c26136973d8dda29de9bde4066.setContent(html_c1031fff6888c2e7e8adc0a9f143a305);
+            
+        
+
+        marker_517fbabd46a6da76519d2736541e8939.bindPopup(popup_58c2f7c26136973d8dda29de9bde4066)
+        ;
+
+        
+    
+    
+            var marker_0e99d0a8b930cf1762b602c1c8aadb4f = L.marker(
+                [43.66105728, 280.6089735],
+                {}
+            ).addTo(feature_group_1cbbec3ae1035257882f979efe1dc796);
+        
+    
+            var icon_3fcada6cc7947ea0d9f59f97b5eb0091 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_0e99d0a8b930cf1762b602c1c8aadb4f.setIcon(icon_3fcada6cc7947ea0d9f59f97b5eb0091);
+        
+    
+        var popup_e2848388cdbe6f0fbf405ebc0b922d3a = L.popup({"maxWidth": 300, "minWidth": 300});
+
+        
+            
+                var html_dd638218e09f67947bb6e7e575984871 = $(`<div id="html_dd638218e09f67947bb6e7e575984871" style="width: 100.0%; height: 100.0%;">Noise type: Large gathering activity<br><br>During the DAY (7AM - 11PM): 104.76dB<br><br>Daytime Reference Noise:<br>Nightclubs and bars, ice cream trucks, dogs barking in ears, Rock or Pop concerts, siren<br><br>Daytime Tips:<br>It's a high-energy atmosphere where you might experience sounds like music, cheering, or applause. Take necessary precautions to protect your hearing in these situations.</div>`)[0];
+                popup_e2848388cdbe6f0fbf405ebc0b922d3a.setContent(html_dd638218e09f67947bb6e7e575984871);
+            
+        
+
+        marker_0e99d0a8b930cf1762b602c1c8aadb4f.bindPopup(popup_e2848388cdbe6f0fbf405ebc0b922d3a)
+        ;
+
+        
+    
+    
+            var marker_60e045be777c0b5b60679b5663820f67 = L.marker(
+                [43.66557438, 280.618844],
+                {}
+            ).addTo(feature_group_1cbbec3ae1035257882f979efe1dc796);
+        
+    
+            var icon_b481dc096c51c3bbe2206f617d36f21d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "beige", "prefix": "glyphicon"}
+            );
+            marker_60e045be777c0b5b60679b5663820f67.setIcon(icon_b481dc096c51c3bbe2206f617d36f21d);
+        
+    
+        var popup_753b2ceb09dc59c20f5d0d57afd7f805 = L.popup({"maxWidth": 300, "minWidth": 300});
+
+        
+            
+                var html_9228cfabc585cb8a12a7a6e82e301ec0 = $(`<div id="html_9228cfabc585cb8a12a7a6e82e301ec0" style="width: 100.0%; height: 100.0%;">Noise type: Large gathering activity<br><br>During the DAY (7AM - 11PM): 66.46dB<br><br>Daytime Reference Noise:<br>Rainfall, average room noise, background music<br><br>Daytime Tips:<br>The noise level is comparable to a calm and average room. It's a comfortable and soothing atmosphere.</div>`)[0];
+                popup_753b2ceb09dc59c20f5d0d57afd7f805.setContent(html_9228cfabc585cb8a12a7a6e82e301ec0);
+            
+        
+
+        marker_60e045be777c0b5b60679b5663820f67.bindPopup(popup_753b2ceb09dc59c20f5d0d57afd7f805)
+        ;
+
+        
+    
+    
+            var marker_815d6737f11a3f86b1050495258ba84c = L.marker(
+                [43.66129013, 280.6169128],
+                {}
+            ).addTo(feature_group_1cbbec3ae1035257882f979efe1dc796);
+        
+    
+            var icon_9d7d604f9d1881909c3d82f9aa8f5964 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "beige", "prefix": "glyphicon"}
+            );
+            marker_815d6737f11a3f86b1050495258ba84c.setIcon(icon_9d7d604f9d1881909c3d82f9aa8f5964);
+        
+    
+        var popup_ee2cf281005f3e5a273f7a879e782f21 = L.popup({"maxWidth": 300, "minWidth": 300});
+
+        
+            
+                var html_98fc469f7425824fcbbfcc5b8708126d = $(`<div id="html_98fc469f7425824fcbbfcc5b8708126d" style="width: 100.0%; height: 100.0%;">Noise type: Construction, traffic<br><br>During the DAY (7AM - 11PM): 59.36dB<br><br>Daytime Reference Noise:<br>Rainfall, average room noise, background music<br><br>Daytime Tips:<br>The noise level is comparable to a calm and average room. It's a comfortable and soothing atmosphere.</div>`)[0];
+                popup_ee2cf281005f3e5a273f7a879e782f21.setContent(html_98fc469f7425824fcbbfcc5b8708126d);
+            
+        
+
+        marker_815d6737f11a3f86b1050495258ba84c.bindPopup(popup_ee2cf281005f3e5a273f7a879e782f21)
+        ;
+
+        
+    
+    
+            var marker_d1881f7e5f85b347b8ac6f5cfe57f3bc = L.marker(
+                [43.65519697, 280.6138337],
+                {}
+            ).addTo(feature_group_1cbbec3ae1035257882f979efe1dc796);
+        
+    
+            var icon_89872cbd2a308e4492903ba30d2ccb6d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightred", "prefix": "glyphicon"}
+            );
+            marker_d1881f7e5f85b347b8ac6f5cfe57f3bc.setIcon(icon_89872cbd2a308e4492903ba30d2ccb6d);
+        
+    
+        var popup_e1f29b9dbe271672eabe2e7f605064db = L.popup({"maxWidth": 300, "minWidth": 300});
+
+        
+            
+                var html_250bc2ff1eb31b24512713a40566a8cf = $(`<div id="html_250bc2ff1eb31b24512713a40566a8cf" style="width: 100.0%; height: 100.0%;">Noise type: Construction<br><br>During the DAY (7AM - 11PM): 85.26dB<br><br>Daytime Reference Noise:<br>Hairdryer, food processor, crowd rooster, approaching train<br><br>Daytime Tips:<br>This range represents moderately loud environments. It's a lively atmosphere, similar to being inside an airplane or a bustling city street.</div>`)[0];
+                popup_e1f29b9dbe271672eabe2e7f605064db.setContent(html_250bc2ff1eb31b24512713a40566a8cf);
+            
+        
+
+        marker_d1881f7e5f85b347b8ac6f5cfe57f3bc.bindPopup(popup_e1f29b9dbe271672eabe2e7f605064db)
+        ;
+
+        
+    
+    
+            var feature_group_389c097ecbb49eb96365fffb5569d050 = L.featureGroup(
+                {}
+            ).addTo(map_221ecd720db964439c948168bbe3c9bc);
+        
+    
+            var tile_layer_4ed3b6dcdb0d98369fbfa379ac47eeda = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(feature_group_389c097ecbb49eb96365fffb5569d050);
+        
+    
+            var marker_30f030c65731ef52bafa6d3eea5561ac = L.marker(
+                [43.65629145, 280.6190693],
+                {}
+            ).addTo(feature_group_389c097ecbb49eb96365fffb5569d050);
+        
+    
+            var icon_6e1693c6bce32c742cb6edd160e02170 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "beige", "prefix": "glyphicon"}
+            );
+            marker_30f030c65731ef52bafa6d3eea5561ac.setIcon(icon_6e1693c6bce32c742cb6edd160e02170);
+        
+    
+        var popup_a9941e7c5cfe2efed8121c078224ee58 = L.popup({"maxWidth": 300, "minWidth": 300});
+
+        
+            
+                var html_61bd6b2d999bd0f624be99923996ff31 = $(`<div id="html_61bd6b2d999bd0f624be99923996ff31" style="width: 100.0%; height: 100.0%;">Noise type: Large gathering acticities, traffic, construction <br><br>During the NIGHT (11PM - 7AM): 82.26dB<br><br>Daytime Reference Noise:<br>Hairdryer, food processor, crowd rooster, approaching train<br><br>Daytime Tips:<br>This range represents moderately loud environments. It's a lively atmosphere, similar to being inside an airplane or a bustling city street.</div>`)[0];
+                popup_a9941e7c5cfe2efed8121c078224ee58.setContent(html_61bd6b2d999bd0f624be99923996ff31);
+            
+        
+
+        marker_30f030c65731ef52bafa6d3eea5561ac.bindPopup(popup_a9941e7c5cfe2efed8121c078224ee58)
+        ;
+
+        
+    
+    
+            var marker_17dcec76c7f2612ac4f28b30dae3201a = L.marker(
+                [43.65856187, 280.6043708],
+                {}
+            ).addTo(feature_group_389c097ecbb49eb96365fffb5569d050);
+        
+    
+            var icon_b820beb166347ccdd3e17a5a5f618bf2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkblue", "prefix": "glyphicon"}
+            );
+            marker_17dcec76c7f2612ac4f28b30dae3201a.setIcon(icon_b820beb166347ccdd3e17a5a5f618bf2);
+        
+    
+        var popup_75bbc963c5a6e41e8659488d79c1cbbf = L.popup({"maxWidth": 300, "minWidth": 300});
+
+        
+            
+                var html_e808f2778f90af8a12c2d3b980e5f631 = $(`<div id="html_e808f2778f90af8a12c2d3b980e5f631" style="width: 100.0%; height: 100.0%;">Noise type: Construction, traffic<br><br>During the NIGHT (11PM - 7AM): 29.46dB<br><br>Daytime Reference Noise:<br>normal breathing, whispering at 5 feet,  soft whisper<br><br>Daytime Tips:<br>This area is quiet and peaceful. Enjoy the tranquility and the softest sounds around you.</div>`)[0];
+                popup_75bbc963c5a6e41e8659488d79c1cbbf.setContent(html_e808f2778f90af8a12c2d3b980e5f631);
+            
+        
+
+        marker_17dcec76c7f2612ac4f28b30dae3201a.bindPopup(popup_75bbc963c5a6e41e8659488d79c1cbbf)
+        ;
+
+        
+    
+    
+            var marker_f98cd71f48458a0cb5c44e7cb913737c = L.marker(
+                [43.65784388, 280.5999184],
+                {}
+            ).addTo(feature_group_389c097ecbb49eb96365fffb5569d050);
+        
+    
+            var icon_911cc9999ee2975c04b2a17d6588accd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "beige", "prefix": "glyphicon"}
+            );
+            marker_f98cd71f48458a0cb5c44e7cb913737c.setIcon(icon_911cc9999ee2975c04b2a17d6588accd);
+        
+    
+        var popup_e72e2f30e93f578c573452a859f68429 = L.popup({"maxWidth": 300, "minWidth": 300});
+
+        
+            
+                var html_7cbd4c5feaf1fe8b179703deba76f686 = $(`<div id="html_7cbd4c5feaf1fe8b179703deba76f686" style="width: 100.0%; height: 100.0%;">Noise type: Traffic, large gathering activities<br><br>During the NIGHT (11PM - 7AM): 55.96dB<br><br>Daytime Reference Noise:<br>Hairdryer, food processor, crowd rooster, approaching train<br><br>Daytime Tips:<br>This range represents moderately loud environments. It's a lively atmosphere, similar to being inside an airplane or a bustling city street.</div>`)[0];
+                popup_e72e2f30e93f578c573452a859f68429.setContent(html_7cbd4c5feaf1fe8b179703deba76f686);
+            
+        
+
+        marker_f98cd71f48458a0cb5c44e7cb913737c.bindPopup(popup_e72e2f30e93f578c573452a859f68429)
+        ;
+
+        
+    
+    
+            var marker_484e31caa242b2a87c1a985dff17101f = L.marker(
+                [43.66253974, 280.6011844],
+                {}
+            ).addTo(feature_group_389c097ecbb49eb96365fffb5569d050);
+        
+    
+            var icon_7d57aee5087f8ab0c9a43ea845a6a61b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkblue", "prefix": "glyphicon"}
+            );
+            marker_484e31caa242b2a87c1a985dff17101f.setIcon(icon_7d57aee5087f8ab0c9a43ea845a6a61b);
+        
+    
+        var popup_36659f3f00c7d856c6d49c61baeaf123 = L.popup({"maxWidth": 300, "minWidth": 300});
+
+        
+            
+                var html_62683c514d90fc8a11a107da8b88ee21 = $(`<div id="html_62683c514d90fc8a11a107da8b88ee21" style="width: 100.0%; height: 100.0%;">Noise type: Large gathering acticity<br><br>During the NIGHT (11PM - 7AM): 26.46dB<br><br>Daytime Reference Noise:<br>normal breathing, whispering at 5 feet,  soft whisper<br><br>Daytime Tips:<br>This area is quiet and peaceful. Enjoy the tranquility and the softest sounds around you.</div>`)[0];
+                popup_36659f3f00c7d856c6d49c61baeaf123.setContent(html_62683c514d90fc8a11a107da8b88ee21);
+            
+        
+
+        marker_484e31caa242b2a87c1a985dff17101f.bindPopup(popup_36659f3f00c7d856c6d49c61baeaf123)
+        ;
+
+        
+    
+    
+            var marker_a08239f4dbdcfcd0afa349fa0ea8ba9f = L.marker(
+                [43.66105728, 280.6089735],
+                {}
+            ).addTo(feature_group_389c097ecbb49eb96365fffb5569d050);
+        
+    
+            var icon_22c7675579d48970bebbe7145a23ab18 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkblue", "prefix": "glyphicon"}
+            );
+            marker_a08239f4dbdcfcd0afa349fa0ea8ba9f.setIcon(icon_22c7675579d48970bebbe7145a23ab18);
+        
+    
+        var popup_356681027810adb0a5fd7f67231aeb0f = L.popup({"maxWidth": 300, "minWidth": 300});
+
+        
+            
+                var html_d2250645a0bb67cfa934e77a0d01f652 = $(`<div id="html_d2250645a0bb67cfa934e77a0d01f652" style="width: 100.0%; height: 100.0%;">Noise type: Large gathering activity<br><br>During the NIGHT (11PM - 7AM): 27.96dB<br><br>Daytime Reference Noise:<br>normal breathing, whispering at 5 feet,  soft whisper<br><br>Daytime Tips:<br>This area is quiet and peaceful. Enjoy the tranquility and the softest sounds around you.</div>`)[0];
+                popup_356681027810adb0a5fd7f67231aeb0f.setContent(html_d2250645a0bb67cfa934e77a0d01f652);
+            
+        
+
+        marker_a08239f4dbdcfcd0afa349fa0ea8ba9f.bindPopup(popup_356681027810adb0a5fd7f67231aeb0f)
+        ;
+
+        
+    
+    
+            var marker_3244f871ef5c1484024010f6aba09633 = L.marker(
+                [43.66557438, 280.618844],
+                {}
+            ).addTo(feature_group_389c097ecbb49eb96365fffb5569d050);
+        
+    
+            var icon_e4de46131d7efed851247a53889fbd92 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "beige", "prefix": "glyphicon"}
+            );
+            marker_3244f871ef5c1484024010f6aba09633.setIcon(icon_e4de46131d7efed851247a53889fbd92);
+        
+    
+        var popup_b84ce36d291a133968d25e664e28e15d = L.popup({"maxWidth": 300, "minWidth": 300});
+
+        
+            
+                var html_ed3b71b4f50ebc71d7c90dbdd3e24884 = $(`<div id="html_ed3b71b4f50ebc71d7c90dbdd3e24884" style="width: 100.0%; height: 100.0%;">Noise type: Large gathering activity<br><br>During the NIGHT (11PM - 7AM): 78.36dB<br><br>Daytime Reference Noise:<br>Hairdryer, food processor, crowd rooster, approaching train<br><br>Daytime Tips:<br>This range represents moderately loud environments. It's a lively atmosphere, similar to being inside an airplane or a bustling city street.</div>`)[0];
+                popup_b84ce36d291a133968d25e664e28e15d.setContent(html_ed3b71b4f50ebc71d7c90dbdd3e24884);
+            
+        
+
+        marker_3244f871ef5c1484024010f6aba09633.bindPopup(popup_b84ce36d291a133968d25e664e28e15d)
+        ;
+
+        
+    
+    
+            var marker_8dd1d571c0c8f594e93ccbb1f9ac47d5 = L.marker(
+                [43.66129013, 280.6169128],
+                {}
+            ).addTo(feature_group_389c097ecbb49eb96365fffb5569d050);
+        
+    
+            var icon_2184e5f53e682048b4de87f002961221 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_8dd1d571c0c8f594e93ccbb1f9ac47d5.setIcon(icon_2184e5f53e682048b4de87f002961221);
+        
+    
+        var popup_7b9ba76aac717194f4ffa50d52102c76 = L.popup({"maxWidth": 300, "minWidth": 300});
+
+        
+            
+                var html_c137f8e2bd9c7876980e9d783ebae7b8 = $(`<div id="html_c137f8e2bd9c7876980e9d783ebae7b8" style="width: 100.0%; height: 100.0%;">Noise type: Construction, traffic<br><br>During the NIGHT (11PM - 7AM): 42.66dB<br><br>Daytime Reference Noise:<br>Normal conversation, landscaping equipment (from inside a house), inside an airplane<br><br>Daytime Tips:<br>It might be a bit noisy, but still manageable for most people.</div>`)[0];
+                popup_7b9ba76aac717194f4ffa50d52102c76.setContent(html_c137f8e2bd9c7876980e9d783ebae7b8);
+            
+        
+
+        marker_8dd1d571c0c8f594e93ccbb1f9ac47d5.bindPopup(popup_7b9ba76aac717194f4ffa50d52102c76)
+        ;
+
+        
+    
+    
+            var marker_c121066f463dd3a45277c503b0381ec3 = L.marker(
+                [43.65519697, 280.6138337],
+                {}
+            ).addTo(feature_group_389c097ecbb49eb96365fffb5569d050);
+        
+    
+            var icon_6973baa6ce66349f9224759a06ba3dbd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c121066f463dd3a45277c503b0381ec3.setIcon(icon_6973baa6ce66349f9224759a06ba3dbd);
+        
+    
+        var popup_66e55f61092c5629f98b6a792ed38456 = L.popup({"maxWidth": 300, "minWidth": 300});
+
+        
+            
+                var html_39ad862a00b8c0f2d39f71a48010c25c = $(`<div id="html_39ad862a00b8c0f2d39f71a48010c25c" style="width: 100.0%; height: 100.0%;">Noise type: Construction<br><br>During the NIGHT (11PM - 7AM): 39.86dB<br><br>Daytime Reference Noise:<br>Rainfall, average room noise, background music<br><br>Daytime Tips:<br>The noise level is comparable to a calm and average room. It's a comfortable and soothing atmosphere.</div>`)[0];
+                popup_66e55f61092c5629f98b6a792ed38456.setContent(html_39ad862a00b8c0f2d39f71a48010c25c);
+            
+        
+
+        marker_c121066f463dd3a45277c503b0381ec3.bindPopup(popup_66e55f61092c5629f98b6a792ed38456)
+        ;
+
+        
+    
+    
+            var layer_control_d1ebbaa120916487854a2883c13a97fa = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_3322daf2ff93ac637e989210f09d8070,
+                },
+                overlays :  {
+                    "Daytime" : feature_group_1cbbec3ae1035257882f979efe1dc796,
+                    "Nighttime" : feature_group_389c097ecbb49eb96365fffb5569d050,
+                },
+            };
+            L.control.layers(
+                layer_control_d1ebbaa120916487854a2883c13a97fa.base_layers,
+                layer_control_d1ebbaa120916487854a2883c13a97fa.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_221ecd720db964439c948168bbe3c9bc);
+        
+</script>
+</html>
